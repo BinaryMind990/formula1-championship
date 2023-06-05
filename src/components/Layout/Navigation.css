@@ -1,14 +1,11 @@
 .navigation-container {
-  padding-top: 20px;
-  width: 200px;
   background-color: #222;
-  border-right: 1px solid #000;
-  min-height: 100vh;
 }
 
 .logo {
-  padding: 10px;
+  padding: 20px 10px;
   border-bottom: 1px solid black;
+  text-align: center;
 }
 
 .navigation-wrapper {
@@ -16,75 +13,54 @@
   flex-direction: column;
 }
 
+.navigation-content {
+  display: flex;
+}
+
 .navigation-link {
+  width: 33.333%;
   text-decoration: none;
   color: #fff;
   font-size: 20px;
   font-weight: bold;
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
-  margin-top: 2px;
   padding: 10px;
-  height: 80px;
+  height: 60px;
   border-bottom: 1px solid black;
+  border-right: 1px solid black;
 }
 
-.active {
-  background-color: red;
-  position: relative;
-}
-
-.active::before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  width: calc(100% + 10px);
-  height: calc(100% + 10px);
-  border-radius: 10px;
-}
-
-@keyframes neonBorder {
-  0%,
-  100% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
+.navigation-link:last-of-type {
+  border-right: none;
 }
 
 .navigation-link-icon {
-  width: 100px;
-  margin-right: 10px;
+  display: none;
 }
 
-.navigation-link-text {
-  margin: 0;
-  flex: 1;
-}
-
-@media (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .navigation-container {
-    width: 150px;
+    width: 200px;
+    border-right: 1px solid #000;
+    min-height: 100vh;
   }
 
-  .top-navigation-container {
-    left: 130px;
+  .navigation-content {
+    flex-direction: column;
   }
 
-  .logo img {
-    width: 100px;
+  .navigation-link {
+    width: auto;
+    border-right: none;
+    height: 80px;
   }
 
   .navigation-link-icon {
-    width: 50px;
+    display: inline-block;
+    width: 100px;
+    margin-right: 10px;
   }
-
-  .navigation-link span {
-    font-size: 15px;
-  }
-
 }

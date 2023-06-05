@@ -8,36 +8,30 @@ const Breadcrumbs = ({ items }) => {
 	const isHome = location.pathname === '/';
 
 	return (
-		<div>
+		<div className='breadcrumb-container'>
 			{!isHome && (
-				<div className='top-navigation-container'>
-					<div className='breadcrumb-container'>
-						<Breadcrumb className='top-navigation-link'>
-							<Breadcrumb.Item>
-								<Link
-									to='/'
-									className={`breadcrumb-link ${
-										!isHome ? 'active' : ''
-									}`}
-								>
-									{!isHome && <HomeFilled />}Home
-								</Link>
-							</Breadcrumb.Item>
-							{items.map((item, index) => (
-								<Breadcrumb.Item key={index}>
-									<Link
-										to={item.href}
-										className={`breadcrumb-link ${
-											item.href !== '' ? 'active' : ''
-										} ${item.href === '' ? 'current' : ''}`}
-									>
-										{item.title}
-									</Link>
-								</Breadcrumb.Item>
-							))}
-						</Breadcrumb>
-					</div>
-				</div>
+				<Breadcrumb className='breadcrumb-navigation-link'>
+					<Breadcrumb.Item>
+						<Link
+							to='/'
+							className={`breadcrumb-link ${!isHome ? 'active' : ''}`}
+						>
+							{!isHome && <HomeFilled />}Home
+						</Link>
+					</Breadcrumb.Item>
+					{items.map((item, index) => (
+						<Breadcrumb.Item key={index}>
+							<Link
+								to={item.href}
+								className={`breadcrumb-link ${
+									item.href !== '' ? 'active' : 'current'
+								}`}
+							>
+								{item.title}
+							</Link>
+						</Breadcrumb.Item>
+					))}
+				</Breadcrumb>
 			)}
 		</div>
 	);

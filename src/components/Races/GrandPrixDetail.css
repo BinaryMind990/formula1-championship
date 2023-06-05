@@ -1,3 +1,13 @@
+.grand-prix {
+  flex-direction: column;
+}
+
+.flag-icon-grand-prix,
+.flag-icon-grand-prix-az {
+  width: 55px;
+  height: auto;
+}
+
 .grand-prix-info {
   margin-bottom: 30px;
 }
@@ -5,7 +15,7 @@
 .race-name {
   font-size: 18px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .grand-prix-flag {
@@ -16,81 +26,38 @@
 
 .grand-prix-table-section {
   display: flex;
-  padding: 20px;
-  background-color: #ccc;
-  width: 100%;
-  height: 100vh;
+  flex-direction: column;
 }
 
 .table-wrapper-grand-prix {
-  width: 50%;
+  width: 100%;
+  overflow-y: auto;
 }
 
-.table-wrapper-grand-prix + .table-wrapper-grand-prix {
-  margin-left: 40px;
+.table-wrapper-grand-prix+.table-wrapper-grand-prix {
+  /* margin-left: 40px; */
+  margin-top: 30px;
 }
 
 .race-date {
   font-weight: bold;
 }
 
-.driver-aditional-info {
-  display: flex;
-}
-
-.driver-aditional-info-left {
-  margin-right: 20px;
-}
-
 .no-qualifying-results .table-wrapper-grand-prix {
   width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-  .details-container {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    overflow: inherit;
+@media screen and (min-width: 1200px) {
+  .table-wrapper-grand-prix+.table-wrapper-grand-prix {
+    margin-left: 40px;
+    margin-top: 0;
   }
 
   .grand-prix-table-section {
-    display: block;
-    min-width: 100%;
-    padding: 0;
-  }
-  .grand-prix-table-section .table-wrapper {
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .table-wrapper .table-wrapper-grand-prix {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .table-wrapper-grand-prix.table-wrapper-grand-prix {
-    margin-top: 20px;
-  }
-  .table-wrapper-grand-prix.table-wrapper-grand-prix table {
-    max-width: 100%;
-  }
-  .table-wrapper table {
-    width: 500px;
-  }
-  .grand-prix-table-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
-    width: 100%;
-  }
-  .page-layout{
-    overflow: hidden;
+    flex-direction: row;
   }
 
-  .table-wrapper-grand-prix + .table-wrapper-grand-prix {
-    margin-left: 0;
+  .table-wrapper-grand-prix {
+    width: 50%;
   }
 }

@@ -95,57 +95,54 @@ const GrandPrixDetails = () => {
 					className='details-info'
 					key={grandPrixDetails[0].Circuit.circuitId}
 				>
-					<div className='driver-team-info'>
-
-						{getFlagCode(grandPrixDetails[0].Circuit.Location.country) === 'AZ' ? (
+					<div className='driver-team-info grand-prix'>
+						{getFlagCode(grandPrixDetails[0].Circuit.Location.country) ===
+						'AZ' ? (
 							<img
 								src={azerbaijanFlag}
 								alt='Azerbaijan Flag'
-								className='flag-az'
+								className='flag-icon-grand-prix-az'
 							/>
 						) : (
 							<Flag
-								className='flag-icon'
-								country={getFlagCode(grandPrixDetails[0].Circuit.Location.country)}
+								className='flag-icon-grand-prix'
+								country={getFlagCode(
+									grandPrixDetails[0].Circuit.Location.country
+								)}
 							/>
 						)}
 						<p className='race-name'>{grandPrixDetails[0].raceName}</p>
 					</div>
 					<div className='aditional-info'>
-						<div className='driver-aditional-info-left'>
-							<p>
-								<span className='aditional-info-label'>Country: </span>
-								{grandPrixDetails[0].Circuit.Location.country}
-							</p>
-							<p>
-								<span className='aditional-info-label'>Location: </span>
-								{grandPrixDetails[0].Circuit.Location.locality}
-							</p>
-							<p>
-								<span className='aditional-info-label'>Date:</span>
-								{grandPrixDetails[0].date}
-							</p>
-							<p>
-								<span className='aditional-info-label'>
-									Full Report:
-								</span>
-								<Link
-									target='blank'
-									to={grandPrixDetails[0].Circuit.url}
-								>
-									<RiShareBoxLine className='share-icon' size={15} />
-								</Link>
-							</p>
-						</div>
+						<p>
+							<span className='aditional-info-label'>Country: </span>
+							{grandPrixDetails[0].Circuit.Location.country}
+						</p>
+						<p>
+							<span className='aditional-info-label'>Location: </span>
+							{grandPrixDetails[0].Circuit.Location.locality}
+						</p>
+						<p>
+							<span className='aditional-info-label'>Date:</span>
+							{grandPrixDetails[0].date}
+						</p>
+						<p>
+							<span className='aditional-info-label'>Full Report:</span>
+							<Link target='blank' to={grandPrixDetails[0].Circuit.url}>
+								<RiShareBoxLine className='share-icon' size={15} />
+							</Link>
+						</p>
 					</div>
 				</div>
 			</div>
+
 			<div
-				className={`grand-prix-table-section ${qualifiers.length === 0 ? 'no-qualifying-results' : ''
-					}`}
+				className={`details-table-container grand-prix-table-section ${
+					qualifiers.length === 0 ? 'no-qualifying-results' : ''
+				}`}
 			>
 				{qualifiers.length > 0 && (
-					<div className='table-wrapper table-wrapper-grand-prix'>
+					<div className='table-wrapper-grand-prix'>
 						<table>
 							<caption>Qualifying Results</caption>
 							<thead>
@@ -168,14 +165,22 @@ const GrandPrixDetails = () => {
 													)}
 													className='flag-icon'
 												/>
-												<Link to={`/drivers/${qualifier.Driver.driverId}`}
-													className='link'>
-													{qualifier.Driver.familyName}</Link>
+												<Link
+													to={`/drivers/${qualifier.Driver.driverId}`}
+													className='link'
+												>
+													{qualifier.Driver.familyName}
+												</Link>
 											</div>
 										</td>
-										<td><Link to={`/teams/${qualifier.Constructor.constructorId}`}
-											className='link'>
-											{qualifier.Constructor.name}</Link></td>
+										<td>
+											<Link
+												to={`/teams/${qualifier.Constructor.constructorId}`}
+												className='link'
+											>
+												{qualifier.Constructor.name}
+											</Link>
+										</td>
 										<td>{getBestTime(qualifier)}</td>
 									</tr>
 								))}
@@ -183,7 +188,7 @@ const GrandPrixDetails = () => {
 						</table>
 					</div>
 				)}
-				<div className='table-wrapper table-wrapper-grand-prix'>
+				<div className='table-wrapper-grand-prix'>
 					<table>
 						<caption>Race Results</caption>
 						<thead>
@@ -207,13 +212,22 @@ const GrandPrixDetails = () => {
 												)}
 												className='flag-icon'
 											/>
-											<Link to={`/drivers/${result.Driver.driverId}`}
-												className='link'>{result.Driver.familyName}</Link>
+											<Link
+												to={`/drivers/${result.Driver.driverId}`}
+												className='link'
+											>
+												{result.Driver.familyName}
+											</Link>
 										</div>
 									</td>
-									<td><Link to={`/teams/${result.Constructor.constructorId}`}
-										className='link'>
-										{result.Constructor.name}</Link></td>
+									<td>
+										<Link
+											to={`/teams/${result.Constructor.constructorId}`}
+											className='link'
+										>
+											{result.Constructor.name}
+										</Link>
+									</td>
 									<td>{result.Time ? result.Time.time : null}</td>
 									<td
 										className={`default-background position-${result.position}`}

@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+/* RESET */
+
 body {
   margin: 0;
   padding: 0;
@@ -15,17 +17,10 @@ p {
   margin: 0;
 }
 
-.home-page {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-}
+/* GENERAL CLASSES*/
 
-.home-page img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
+.active {
+  background-color: #f82b2b;
 }
 
 .link {
@@ -44,18 +39,49 @@ p {
   color: #9c9696;
 }
 
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #222;
+}
+
+.share-icon {
+  color: #f82b2b;
+  vertical-align: middle;
+}
+
+.flag-icon {
+  margin-right: 5px;
+}
+
+.flag-az {
+  height: 17px;
+  width: 26px;
+  margin-right: 5px;
+}
+
+.winner-details {
+  align-items: center;
+  display: flex;
+}
+
 .page-layout {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #222;
 }
 
 .container {
+  position: relative;
   width: 100%;
   padding: 20px;
-  height: 100vh;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   background-image: url(../public/assets/f1HomePage.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -68,13 +94,15 @@ p {
   margin-top: 40px;
 }
 
+/* TABLE */
+
 .table-wrapper {
   display: flex;
   flex-direction: column;
   max-height: calc(100% - 20px);
   overflow-y: auto;
   opacity: 0.9;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 table {
@@ -116,31 +144,7 @@ td {
   border: 1px solid black;
 }
 
-.loader-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: #222;
-}
-
-.share-icon {
-  color: #fff;
-}
-
-.flag-icon {
-  margin-right: 5px;
-}
-.flag-az {
-  height: 17px;
-  width: 26px;
-  margin-right: 5px;
-}
-
-.aditional-info-label {
-  margin-right: 20px;
-}
+/* TABLE POSITION CLASSES */
 
 .default-background {
   background-color: darkgray;
@@ -186,24 +190,37 @@ td {
   background-color: lightcoral;
 }
 
-.details-container {
+/* HOME PAGE*/
+
+.home-page {
   display: flex;
+  flex-direction: column;
+  overflow: hidden;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+}
+
+.home-page img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* OTHER PAGES */
+
+.details-container {
+  position: relative;
 }
 
 .driver-team-details {
-  width: 20vw;
   background-color: #222;
   color: #fff;
-  min-height: 100vh;
-  margin-top: 40px;
 }
 
 .details-info {
   padding: 20px;
   border-bottom: 1px solid #000;
+  margin-top: 45px;
 }
 
 .driver-team-info {
@@ -214,6 +231,7 @@ td {
 .driver-team-avatar {
   width: 100px;
   margin-right: 10px;
+  object-fit: contain;
 }
 
 .driver-team-name {
@@ -221,19 +239,15 @@ td {
   font-weight: bold;
 }
 
-.aditional-info {
-  display: flex;
-}
-
-.aditional-info-left {
-  margin-right: 20px;
-}
-
 .details-table-container {
   width: 100%;
   padding: 20px;
   background-color: #ccc;
-  margin-top: 40px;
+}
+
+.details-table-content {
+  overflow-y: auto;
+  height: 100%;
 }
 
 .details-race {
@@ -243,197 +257,190 @@ td {
   font-weight: 600;
 }
 
+.aditional-info-label {
+  margin-right: 20px;
+}
+
+/* YEAR SELECTOR*/
+
 .year-selector {
   background-color: #222;
-  padding: 22px;
+  padding: 10px 20px;
   text-align: center;
 }
 
+.year-selector-option {
+  background-color: #fff;
+  color: #222;
+}
+
+.select {
+  outline: 1px solid #fff;
+  outline-offset: 3px;
+  width: 80px;
+  text-align: center;
+}
+
+.select:focus-visible {
+  outline: 1px solid #f82b2b;
+  outline-offset: 3px;
+}
+
+
 .year-selector label {
+  text-transform: uppercase;
   color: #fff;
-  font-size: 25px;
+  font-size: 11px;
 }
 
 .year-selector select {
-  margin-left: 30px;
-  font-size: 25px;
-  border-radius: 10px;
-  padding: 10px;
-  background-color: red;
-  border-radius: 10px;
-  box-shadow: 0 0 20px red;
+  margin-left: 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 5px;
+  background-color: #f82b2b;
   color: #fff;
 }
 
-.year-selector select::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  width: calc(100% + 10px);
-  height: calc(100% + 10px);
-  border-radius: 15px;
-  box-shadow: 0 0 20px red;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
+/* BREADCRUMB */
 
-.year-selector select::before {
-  opacity: 1;
-}
-
-.top-navigation-container {
+.breadcrumb-container {
   margin-top: 0;
   background-color: #222;
   position: absolute;
   top: 0;
-  left: 200px;
+  left: 0;
   right: 0;
-  padding: 10px;
-  border-bottom: 2px solid #000;
+  padding: 10px 20px;
+  border-bottom: 1px solid #000;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.top-navigation-link .ant-breadcrumb-separator {
+.ant-breadcrumb-separator {
   display: none;
 }
 
-.top-navigation-link .ant-breadcrumb-link:not(.ant-breadcrumb-link-active) {
-  margin-right: 10px;
+.ant-breadcrumb ol {
+  column-gap: 5px;
+}
+
+.ant-breadcrumb a {
+  margin-inline: auto;
 }
 
 .breadcrumb-link {
   color: #fff !important;
-  background: transparent;
+}
+
+.breadcrumb-link.current {
+  cursor: default;
 }
 
 .breadcrumb-link .anticon-home {
   margin-right: 5px;
 }
 
-.breadcrumb-link .active {
-  background: red;
-  color: #fff;
-}
-
-.current {
-  color: #202020;
-  cursor: default;
-}
-
-.top-navigation-link {
-  color: #fff;
-  align-items: center;
+.breadcrumb-link.active {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1083px) {
-  .home-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-  }
+.breadcrumb-link.active:hover {
+  background-color: #f82b2b;
+}
 
-  .home-page img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
+/* SEARCH INPUT */
 
-  .year-selector {
-    padding: 14px;
-  }
+.search-input {
+  width: 150px;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
 
-  .year-selector label {
-    font-size: 16px;
-    margin-left: 25px;
-  }
+.ant-input-affix-wrapper-focused,
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+  border-color: #f82b2b;
+}
 
-  .year-selector select {
-    margin-left: 30px;
-    margin-top: 10px;
-    font-size: 18px;
-    padding: 6px;
-  }
-
-  .page-layout {
-    background-color: #222;
-  }
-
-  .details-container {
-    flex-direction: column;
-  }
-
-  .driver-team-details {
-    width: 100vw;
-    min-height: 20vh;
+@media screen and (min-width: 480px) {
+  .search-input {
+    width: 200px;
   }
 
   .details-info {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
   }
 
   .driver-team-info {
-    margin-right: 30px;
-  }
-
-  .driver {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-right: 50px;
+    margin-bottom: 0;
   }
 }
-.winner-details {
-  align-items: center;
-  display: flex;
-}
 
-@media screen and (max-width: 768px) {
-  .home-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-    flex-direction: column;
-  }
-
-  .year-selector {
-    margin-top: 50px;
-  }
-
-  .home-page img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
-
+@media screen and (min-width: 768px) {
   .page-layout {
-    background-color: #222;
+    flex-direction: row;
+    height: 100%;
   }
 
-  .main-title {
-    font-size: 25px;
+  .search-input {
+    width: 300px;
+  }
+
+  .container {
+    height: 100vh;
+    overflow: hidden;
+    flex-grow: 0;
   }
 
   .table-wrapper {
-    align-items: center;
-  }
-  .details-container {
-    overflow: scroll;
+    margin-top: 50px;
   }
 
-  .aditional-info {
-    margin-right: 160px;
+  .details-container {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
   }
 
   .details-table-container {
     margin-top: 0;
+  }
+
+  .driver-team-details {
+    margin-top: 40px;
+  }
+
+  .details-info {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .details-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .driver-team-details {
+    min-width: 15vw;
+  }
+
+  .details-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .driver-team-info {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .details-table-container {
+    margin-top: 40px;
+
   }
 }
