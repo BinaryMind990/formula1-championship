@@ -7,7 +7,7 @@
 <h2>Demo</h2>
 
 <p>
-  You can check out the demo of the application <a href="https://formula1-championship.netlify.app/">here</a>.
+  You can check out the demo of the application <a href="https://formula1-championship.netlify.app/" target='blank'>here</a>.
 </p>
 
 <h2>Features</h2>
