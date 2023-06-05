@@ -395,6 +395,10 @@ td {
     flex-grow: 0;
   }
 
+  .year-selector {
+    text-align: right;
+  }
+
   .table-wrapper {
     margin-top: 50px;
   }
