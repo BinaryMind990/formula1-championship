@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { YearContext } from '../../contexts/YearContext';
 import { Carousel } from 'antd';
+
+import { YearContext } from '../../../contexts/YearContext';
 
 const Home = () => {
 	const { years, selectedYear, setSelectedYear } = useContext(YearContext);

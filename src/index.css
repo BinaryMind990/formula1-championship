@@ -2,8 +2,6 @@
   box-sizing: border-box;
 }
 
-/* RESET */
-
 body {
   margin: 0;
   padding: 0;
@@ -16,8 +14,6 @@ h1 {
 p {
   margin: 0;
 }
-
-/* GENERAL CLASSES*/
 
 .active {
   background-color: #f82b2b;
@@ -94,8 +90,6 @@ p {
   margin-top: 40px;
 }
 
-/* TABLE */
-
 .table-wrapper {
   display: flex;
   flex-direction: column;
@@ -144,8 +138,6 @@ td {
   border: 1px solid black;
 }
 
-/* TABLE POSITION CLASSES */
-
 .default-background {
   background-color: darkgray;
 }
@@ -190,8 +182,6 @@ td {
   background-color: lightcoral;
 }
 
-/* HOME PAGE*/
-
 .home-page {
   display: flex;
   flex-direction: column;
@@ -205,8 +195,6 @@ td {
   height: 100%;
   width: 100%;
 }
-
-/* OTHER PAGES */
 
 .details-container {
   position: relative;
@@ -261,8 +249,6 @@ td {
   margin-right: 20px;
 }
 
-/* YEAR SELECTOR*/
-
 .year-selector {
   background-color: #222;
   padding: 10px 20px;
@@ -301,8 +287,6 @@ td {
   background-color: #f82b2b;
   color: #fff;
 }
-
-/* BREADCRUMB */
 
 .breadcrumb-container {
   margin-top: 0;
@@ -349,8 +333,6 @@ td {
 .breadcrumb-link.active:hover {
   background-color: #f82b2b;
 }
-
-/* SEARCH INPUT */
 
 .search-input {
   width: 150px;
@@ -430,7 +412,7 @@ td {
   }
 
   .driver-team-details {
-    min-width: 15vw;
+    width: auto;
   }
 
   .details-info {

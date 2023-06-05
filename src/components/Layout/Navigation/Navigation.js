@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import './Navigation.css';
+
 import { navItems } from './NavItems';
 
 const Navigation = () => {
@@ -24,7 +25,7 @@ const Navigation = () => {
 					))}
 				</div>
 				<div className='credits'>
-					<p>&copy; Smart school 2023</p>
+					<p>&copy; Stefan Jevtovic 2023</p>
 				</div>
 			</div>
 		</div>

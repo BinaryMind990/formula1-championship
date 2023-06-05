@@ -1,14 +1,14 @@
-import { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import FormulaAxios from '../../apis/FormulaAxios';
-import './DriverDetails.css';
-import Flag from 'react-flagkit';
 import { RiShareBoxLine } from 'react-icons/ri';
-import './DriverDetails.css';
-import Loader from '../Loader';
+import Flag from 'react-flagkit';
 import { FlagContext } from '../../contexts/FlagContext';
 import { YearContext } from '../../contexts/YearContext';
+import './DriverDetails.css';
+
+import Loader from '../Loader';
 import Breadcrumbs from '../Breadcrumbs';
+import FormulaAxios from '../../apis/FormulaAxios';
 import azerbaijanFlag from '../../assets/azerbaijanFlag.png';
 
 const DriverDetails = () => {
@@ -109,7 +109,7 @@ const DriverDetails = () => {
 				</div>
 			</div>
 			<div className='details-table-container'>
-				<div class='details-table-content'>
+				<div className='details-table-content'>
 					<table className='driver-detail-table'>
 						<caption>Formula 1 {selectedYear} Results</caption>
 						<thead>

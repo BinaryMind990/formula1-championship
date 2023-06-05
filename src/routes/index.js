@@ -5,7 +5,7 @@ import Races from '../components/Races/Races';
 import DriverDetails from '../components/Drivers/DriverDetails';
 import GrandPrixDetails from '../components/Races/GrandPrixDetails';
 import TeamsDetails from '../components/Teams/TeamsDetails';
-import Home from '../components/Layout/Home';
+import Home from '../components/Layout/Home/Home';
 
 export const AppRoutes = () => {
 	return (

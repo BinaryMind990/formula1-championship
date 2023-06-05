@@ -1,14 +1,15 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Loader from '../Loader';
-import Flag from 'react-flagkit';
-import { FlagContext } from '../../contexts/FlagContext';
-import { YearContext } from '../../contexts/YearContext';
-import ErrorModal from '../UI/ErrorModal';
-import FormulaAxios from '../../apis/FormulaAxios';
-import { searchTeams } from '../Helper';
 import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
+import Flag from 'react-flagkit';
+
+import Loader from '../Loader';
+import { FlagContext } from '../../contexts/FlagContext';
+import { YearContext } from '../../contexts/YearContext';
+import ErrorModal from '../UI/ErrorModal/ErrorModal';
+import FormulaAxios from '../../apis/FormulaAxios';
+import { searchTeams } from '../Helper';
 import Breadcrumbs from '../Breadcrumbs';
 
 const Teams = () => {

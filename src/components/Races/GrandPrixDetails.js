@@ -1,13 +1,14 @@
 import { useState, useEffect, useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import FormulaAxios from '../../apis/FormulaAxios';
 import { RiShareBoxLine } from 'react-icons/ri';
-import Loader from '../Loader';
-import './GrandPrixDetail.css';
 import Flag from 'react-flagkit';
+import './GrandPrixDetail.css';
+
+import FormulaAxios from '../../apis/FormulaAxios';
 import { YearContext } from '../../contexts/YearContext';
 import { FlagContext } from '../../contexts/FlagContext';
-import ErrorModal from '../UI/ErrorModal';
+import ErrorModal from '../UI/ErrorModal/ErrorModal';
+import Loader from '../Loader';
 import Breadcrumbs from '../Breadcrumbs';
 import azerbaijanFlag from '../../assets/azerbaijanFlag.png';
 

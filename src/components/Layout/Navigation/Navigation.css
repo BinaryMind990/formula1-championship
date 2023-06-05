@@ -15,15 +15,15 @@
 }
 
 .carousel-item1 {
-  background-image: url(../../../public/assets/bolid2.jpg);
+  background-image: url(../../../../public/assets/bolid2.jpg);
 }
 
 .carousel-item2 {
-  background-image: url(../../../public/assets/bolid1.jpg);
+  background-image: url(../../../../public/assets/bolid1.jpg);
 }
 
 .carousel-item3 {
-  background-image: url(../../../public/assets/All-2023-F1-cars.jpg);
+  background-image: url(../../../../public/assets/All-2023-F1-cars.jpg);
 }
 
 .carousel-container {

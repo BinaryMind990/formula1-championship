@@ -1,11 +1,11 @@
 import { useState, useEffect, useContext } from 'react';
-import { useParams } from 'react-router-dom';
-import FormulaAxios from '../../apis/FormulaAxios';
+import { Link, useParams } from 'react-router-dom';
+import { RiShareBoxLine } from 'react-icons/ri';
 import Flag from 'react-flagkit';
 import './TeamsDetails.css';
-import { RiShareBoxLine } from 'react-icons/ri';
-import { Link } from 'react-router-dom';
+
 import Loader from '../Loader';
+import FormulaAxios from '../../apis/FormulaAxios';
 import { FlagContext } from '../../contexts/FlagContext';
 import { YearContext } from '../../contexts/YearContext';
 import Breadcrumbs from '../Breadcrumbs';
@@ -17,7 +17,7 @@ const TeamsDetails = () => {
 	const [teamsDetails, setTeamsDetails] = useState([]);
 	const [teamsResults, setTeamsResults] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
-	const avatarUrl = '../../assets/avatar.png';
+	const avatarUrl = '../../assets/team.png';
 
 	const { id } = useParams();
 
@@ -122,7 +122,7 @@ const TeamsDetails = () => {
 				</div>
 			</div>
 			<div className='details-table-container'>
-				<div class='details-table-content'>
+				<div className='details-table-content'>
 					<table className='team-detail-table'>
 						<caption>Formula 1 {selectedYear} Results</caption>
 						<thead>
