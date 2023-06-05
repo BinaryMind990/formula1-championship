@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { YearContext } from '../../contexts/YearContext';
+import { Carousel } from 'antd';
 
 const Home = () => {
 	const { years, selectedYear, setSelectedYear } = useContext(YearContext);
@@ -31,7 +32,14 @@ const Home = () => {
 					</select>
 				</div>
 			</div>
-			<img src='/assets/f1HomePage.jpg' alt='Home page' />
+			<div className='carousel-container'>
+				<div className='carousel-overlay'></div>
+				<Carousel autoplay effect='fade'>
+					<div className='carousel carousel-item1'></div>
+					<div className='carousel carousel-item2'></div>
+					<div className='carousel carousel-item3'></div>
+				</Carousel>
+			</div>
 		</div>
 	);
 };

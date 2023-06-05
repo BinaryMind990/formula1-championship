@@ -1,3 +1,45 @@
+.carousel-container,
+.carousel,
+.ant-carousel,
+.slick-slider,
+.slick-list,
+.slick-track,
+.slick-slide>div {
+  height: 100%;
+}
+
+.carousel {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.carousel-item1 {
+  background-image: url(../../../public/assets/bolid2.jpg);
+}
+
+.carousel-item2 {
+  background-image: url(../../../public/assets/bolid1.jpg);
+}
+
+.carousel-item3 {
+  background-image: url(../../../public/assets/All-2023-F1-cars.jpg);
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999999;
+}
+
 .navigation-container {
   background-color: #222;
 }
@@ -8,9 +50,14 @@
   text-align: center;
 }
 
+.logo img {
+  vertical-align: middle;
+}
+
 .navigation-wrapper {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .navigation-content {
@@ -41,6 +88,21 @@
   display: none;
 }
 
+.credits {
+  width: 100%;
+  background: #222;
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  bottom: 0;
+  color: #fff;
+  z-index: 9999;
+}
+
+.credits p {
+  align-self: flex-end;
+}
+
 @media screen and (min-width: 768px) {
   .navigation-container {
     width: 200px;
@@ -62,5 +124,16 @@
     display: inline-block;
     width: 100px;
     margin-right: 10px;
+  }
+
+  .credits {
+    position: static;
+    width: auto;
+    color: #fff;
+    display: flex;
+    flex-grow: 1;
+    align-self: center;
+    padding: 0;
+    padding-bottom: 10px;
   }
 }

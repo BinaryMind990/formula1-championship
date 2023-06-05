@@ -23,6 +23,9 @@ const Navigation = () => {
 						</NavLink>
 					))}
 				</div>
+				<div className='credits'>
+					<p>&copy; Smart school 2023</p>
+				</div>
 			</div>
 		</div>
 	);
