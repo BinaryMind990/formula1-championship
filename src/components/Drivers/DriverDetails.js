@@ -6,10 +6,10 @@ import { FlagContext } from '../../contexts/FlagContext';
 import { YearContext } from '../../contexts/YearContext';
 import './DriverDetails.css';
 
-import Loader from '../Loader';
-import Breadcrumbs from '../Breadcrumbs';
+import Loader from '../UI/Loader/Loader';
+import Breadcrumbs from '../UI/Breadcrumbs/Breadcrumbs';
 import FormulaAxios from '../../apis/FormulaAxios';
-import azerbaijanFlag from '../../assets/azerbaijanFlag.png';
+import azerbaijanFlag from '../../images/azerbaijanFlag.png';
 
 const DriverDetails = () => {
 	const { getFlagCode } = useContext(FlagContext);

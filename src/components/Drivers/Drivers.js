@@ -4,12 +4,12 @@ import Flag from 'react-flagkit';
 import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 
-import Loader from '../Loader';
+import Loader from '../UI/Loader/Loader';
 import { FlagContext } from '../../contexts/FlagContext';
 import { YearContext } from '../../contexts/YearContext';
 import FormulaAxios from '../../apis/FormulaAxios';
-import { searchDrivers } from '../Helper';
-import Breadcrumbs from '../Breadcrumbs';
+import { searchDrivers } from '../Utils/Helper';
+import Breadcrumbs from '../UI/Breadcrumbs/Breadcrumbs';
 
 const Drivers = () => {
 	const { getFlagCode } = useContext(FlagContext);

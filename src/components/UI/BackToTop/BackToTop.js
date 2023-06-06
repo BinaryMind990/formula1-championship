@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { handleBackToTop } from '../../Helper';
+import { handleBackToTop } from '../../Utils/Helper';
 import './BackToTop.css';
 import { RiArrowUpSLine } from 'react-icons/ri';
 
@@ -25,7 +25,7 @@ const BackToTop = () => {
 		<div>
 			{displayBackToTop && (
 				<div onClick={handleBackToTop} className='back-to-top'>
-					<RiArrowUpSLine size={255} />
+					<RiArrowUpSLine size={25} />
 				</div>
 			)}
 		</div>

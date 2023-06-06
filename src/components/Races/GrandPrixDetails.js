@@ -8,9 +8,9 @@ import FormulaAxios from '../../apis/FormulaAxios';
 import { YearContext } from '../../contexts/YearContext';
 import { FlagContext } from '../../contexts/FlagContext';
 import ErrorModal from '../UI/ErrorModal/ErrorModal';
-import Loader from '../Loader';
-import Breadcrumbs from '../Breadcrumbs';
-import azerbaijanFlag from '../../assets/azerbaijanFlag.png';
+import Loader from '../UI/Loader/Loader';
+import Breadcrumbs from '../UI/Breadcrumbs/Breadcrumbs';
+import azerbaijanFlag from '../../images/azerbaijanFlag.png';
 
 const GrandPrixDetails = () => {
 	const { selectedYear } = useContext(YearContext);

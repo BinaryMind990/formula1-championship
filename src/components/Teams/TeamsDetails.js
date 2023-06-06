@@ -4,12 +4,12 @@ import { RiShareBoxLine } from 'react-icons/ri';
 import Flag from 'react-flagkit';
 import './TeamsDetails.css';
 
-import Loader from '../Loader';
+import Loader from '../UI/Loader/Loader';
 import FormulaAxios from '../../apis/FormulaAxios';
 import { FlagContext } from '../../contexts/FlagContext';
 import { YearContext } from '../../contexts/YearContext';
-import Breadcrumbs from '../Breadcrumbs';
-import azerbaijanFlag from '../../assets/azerbaijanFlag.png';
+import Breadcrumbs from '../UI/Breadcrumbs/Breadcrumbs';
+import azerbaijanFlag from '../../images/azerbaijanFlag.png';
 
 const TeamsDetails = () => {
 	const { getFlagCode } = useContext(FlagContext);

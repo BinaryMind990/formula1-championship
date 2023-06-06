@@ -4,13 +4,13 @@ import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import Flag from 'react-flagkit';
 
-import Loader from '../Loader';
 import { FlagContext } from '../../contexts/FlagContext';
 import { YearContext } from '../../contexts/YearContext';
 import ErrorModal from '../UI/ErrorModal/ErrorModal';
 import FormulaAxios from '../../apis/FormulaAxios';
-import { searchTeams } from '../Helper';
-import Breadcrumbs from '../Breadcrumbs';
+import Loader from '../UI/Loader/Loader';
+import Breadcrumbs from '../UI/Breadcrumbs/Breadcrumbs';
+import { searchTeams } from '../Utils/Helper';
 
 const Teams = () => {
 	const { getFlagCode } = useContext(FlagContext);

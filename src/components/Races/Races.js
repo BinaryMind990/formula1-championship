@@ -7,10 +7,10 @@ import { Input } from 'antd';
 import FormulaAxios from '../../apis/FormulaAxios';
 import { FlagContext } from '../../contexts/FlagContext';
 import { YearContext } from '../../contexts/YearContext';
-import Loader from '../Loader';
-import { searchRaces } from '../Helper';
-import Breadcrumbs from '../Breadcrumbs';
-import azerbaijanFlag from '../../assets/azerbaijanFlag.png';
+import Loader from '../UI/Loader/Loader';
+import Breadcrumbs from '../UI/Breadcrumbs/Breadcrumbs';
+import { searchRaces } from '../Utils/Helper';
+import azerbaijanFlag from '../../images/azerbaijanFlag.png';
 
 const Races = () => {
 	const { selectedYear } = useContext(YearContext);
