@@ -15,7 +15,7 @@ const Drivers = () => {
 	const { getFlagCode } = useContext(FlagContext);
 	const { selectedYear } = useContext(YearContext);
 	const [drivers, setDrivers] = useState([]);
-	const [search, setSerach] = useState('');
+	const [search, setSearch] = useState('');
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
@@ -40,7 +40,7 @@ const Drivers = () => {
 	const searchData = searchDrivers(drivers, search);
 
 	const handleSearch = (e) => {
-		setSerach(e.target.value);
+		setSearch(e.target.value);
 	};
 
 	const items = [

@@ -52,7 +52,7 @@ const GrandPrixDetails = () => {
 				if (!prevError) {
 					return {
 						title: 'No Qualifying Results',
-						message: `We're sorry, but there are no qualifying results available for the 2013 season.`,
+						message: `We're sorry, but there are no qualifying results available for the ${selectedYear} season.`,
 					};
 				}
 				return prevError;
